@@ -11,8 +11,6 @@ public class Example1 {
 	public static void main(String[] args) {
 	
 		AnnotationConfigApplicationContext config = new AnnotationConfigApplicationContext(ProjectConfig.class);
-	//	BeanFactory config = new AnnotationConfigApplicationContext(ProjectConfig.class);
-		
 		
 		
 		Vehicle veh =  config.getBean("newVehicle",Vehicle.class);
