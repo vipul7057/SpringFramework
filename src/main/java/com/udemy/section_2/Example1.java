@@ -12,7 +12,6 @@ public class Example1 {
 	
 		AnnotationConfigApplicationContext config = new AnnotationConfigApplicationContext(ProjectConfig.class);
 		
-		
 		Vehicle veh =  config.getBean("newVehicle",Vehicle.class);
 		System.out.println(veh.getName());
 		
