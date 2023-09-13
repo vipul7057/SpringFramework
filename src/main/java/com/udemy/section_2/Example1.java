@@ -15,9 +15,10 @@ public class Example1 {
 		Vehicle veh =  config.getBean("newVehicle",Vehicle.class);
 		System.out.println(veh.getName());
 		
+		/*
 		String name = config.getBean(String.class);
 		System.out.println(name);
-		
+		*/
 		
 		Integer num = config.getBean(Integer.class);
 		System.out.println(num);
