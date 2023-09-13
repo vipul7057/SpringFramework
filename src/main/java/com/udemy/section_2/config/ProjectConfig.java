@@ -1,10 +1,10 @@
 package com.udemy.section_2.config;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import com.udemy.section_2.beans.Person;
 import com.udemy.section_2.beans.Vehicle;
 
 
@@ -13,7 +13,22 @@ import com.udemy.section_2.beans.Vehicle;
 @Configuration
 public class ProjectConfig {
 	
+	@Bean
+	public Vehicle vehicle() {
+		Vehicle vehicle = new Vehicle();
+		vehicle.setName("Audi");
+		return vehicle;
+	}
 	
+	@Bean
+	public Person person() {
+		Person person = new Person();
+		person.setName("Vipul");
+		person.setVehicle(vehicle());
+		return person;
+	}
+
+
 	
 	
 	/*
