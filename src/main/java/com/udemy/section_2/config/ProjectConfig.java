@@ -2,14 +2,25 @@ package com.udemy.section_2.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.udemy.section_2.beans.Vehicle;
 
+
+
+@ComponentScan(basePackages = "com.udemy.section_2.beans")
 @Configuration
 public class ProjectConfig {
 	
 	
+	
+	
+	/*
+	 * 
+	 * Use below code with the java class is not makred as @Compnent
+	 * 
+	 * 
 	@Bean
 	public Vehicle getVeh() {
 		Vehicle veh = new Vehicle();
@@ -33,4 +44,5 @@ public class ProjectConfig {
 	Integer getNumber() {
 		return 10;
 	}
+	*/
 }

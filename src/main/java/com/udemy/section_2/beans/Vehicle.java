@@ -1,5 +1,8 @@
 package com.udemy.section_2.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Vehicle {
 	
 	private String name;
@@ -15,6 +18,9 @@ public class Vehicle {
 		
 	}
 	
+	public String printMethod() {
+		return "Inside Vehicle";
+	}
 	
 
 }
