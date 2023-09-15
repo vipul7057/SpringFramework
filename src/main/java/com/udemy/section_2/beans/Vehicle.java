@@ -5,11 +5,10 @@ import org.springframework.stereotype.Component;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
-
 @Component
 public class Vehicle {
 
-	private String name;
+	private String name = "i20";
 
 	public String getName() {
 		return name;
@@ -20,7 +19,7 @@ public class Vehicle {
 	}
 
 	public Vehicle() {
-		super();
+		System.out.println("vehicle object created by spring");
 
 	}
 
@@ -28,17 +27,14 @@ public class Vehicle {
 		return "Inside Vehicle";
 	}
 
-	@PostConstruct
-	public void initialize() {
-		this.name = "Honda";
-	}
-	@PreDestroy
-	public void destroy() {
-		System.out.println("Destroying the Bean");
-	}
-
+	/*
+	 * @PostConstruct public void initialize() { this.name = "Honda"; }
+	 * 
+	 * @PreDestroy public void destroy() {
+	 * System.out.println("Destroying the Bean"); }
+	 */
 	public void setVehicle(Vehicle vehicle) {
-		
+
 	}
 
 	@Override

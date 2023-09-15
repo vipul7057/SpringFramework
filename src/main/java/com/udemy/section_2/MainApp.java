@@ -13,23 +13,20 @@ public class MainApp {
 
 	public static void main(String[] args) {
 
-		//XML File Bean Creation
+		// XML File Bean Creation
 		/*
 		 * ApplicationContext config = new ClassPathXmlApplicationContext("beans.xml");
 		 * Vehicle veh = (Vehicle)config.getBean("vehicle");
 		 * System.out.println(veh.getName());
 		 */
-		
-		AnnotationConfigApplicationContext config = new AnnotationConfigApplicationContext(ProjectConfig.class);
-		Vehicle vehicle =  (Vehicle)config.getBean("vehicle");
-		System.out.println(vehicle.getName());
-		
-		Person person = (Person)config.getBean("person");
-		System.out.println(person.getVehicle().toString());
-		
-		
-		
-		
+
+			AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+	        Person person = context.getBean(Person.class);
+	        Vehicle vehicle = context.getBean(Vehicle.class);
+	        System.out.println("Person name from Spring Context is: " + person.getName());
+	        System.out.println("Vehicle name from Spring Context is: " + vehicle.getName());
+	        System.out.println("Vehicle that Person own is: " + person.getVehicle());
+
 		/*
 		 * 
 		 * 
