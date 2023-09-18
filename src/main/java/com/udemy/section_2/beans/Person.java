@@ -2,9 +2,11 @@ package com.udemy.section_2.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
+@Lazy
 public class Person {
 
 	private String name = "Vipul";
@@ -36,7 +38,7 @@ public class Person {
 	}
 
 	public Person() {
-		super();
+		System.out.println("Person Created by Spring");
 	}
 
 	@Override

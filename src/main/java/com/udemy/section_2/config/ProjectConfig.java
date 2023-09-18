@@ -3,8 +3,10 @@ package com.udemy.section_2.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
-
+import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.config.BeanDefinition;
 import com.udemy.section_2.beans.Person;
 import com.udemy.section_2.beans.Vehicle;
 
@@ -13,6 +15,7 @@ import com.udemy.section_2.beans.Vehicle;
 public class ProjectConfig {
 
 	@Bean
+	@Lazy
 	public Vehicle vehicle() {
 		Vehicle vehicle = new Vehicle();
 		vehicle.setName("Audi");
@@ -20,6 +23,7 @@ public class ProjectConfig {
 	}
 	
 	@Bean
+	@Lazy
 	public Person person() {
 		Person person = new Person();
 		person.setName("Vipul");
