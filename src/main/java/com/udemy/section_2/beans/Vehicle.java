@@ -27,12 +27,16 @@ public class Vehicle {
 		return "Inside Vehicle";
 	}
 
-	/*
-	 * @PostConstruct public void initialize() { this.name = "Honda"; }
-	 * 
-	 * @PreDestroy public void destroy() {
-	 * System.out.println("Destroying the Bean"); }
-	 */
+	@PostConstruct
+	public void initialize() {
+		this.name = "Honda";
+	}
+
+	@PreDestroy
+	public void destroy() {
+		System.out.println("Destroying the Bean");
+	}
+
 	public void setVehicle(Vehicle vehicle) {
 
 	}
