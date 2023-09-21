@@ -24,7 +24,6 @@ public class MainApp {
 		System.out.println("Before Creating Person by Spring");
 		Person person = context.getBean(Person.class);
 		Vehicle vehicle = context.getBean(Vehicle.class);
-
 		
 		System.out.println();
 		System.out.println("Person name from Spring Context is: " + person.getName());
