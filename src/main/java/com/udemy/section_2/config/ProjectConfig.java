@@ -31,6 +31,7 @@ public class ProjectConfig {
 		return person;
 	}
 
+	
 	/*
 	 * 
 	 * Use below code with the java class is not makred as @Compnent
